@@ -4,11 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
-        mc:Ignorable="d" Height="410" Width="320"  ResizeMode="NoResize" Title="WPF calculator">
+        mc:Ignorable="d" Height="423" Width="320"  ResizeMode="NoResize" Title="WPF calculator">
     <Grid Height="380" Width="300">
         <Menu Margin="0,0,0,360">
             <MenuItem Header="Options">
                 <MenuItem Header="Exit" Name="Exit" Click="Exit_OnClick"/>
+                <Expander Header="Режимы">
+                    <StackPanel>
+                    <Button Name="origin" Content="Обычный" Click="Origin_OnClick"/>
+                    <Button Name="engineering" Content="Инженерный" Click="Engineering_OnClick"/>
+                    <Button Name="programmer" Content="Программист" Click="Programmer_OnClick" />
+                    </StackPanel>
+                </Expander>
             </MenuItem>
         </Menu>
         <TextBox Name="Input" Margin="0,20,0,300"/>
@@ -27,5 +34,14 @@
         <Button Name="Minus" Margin="240,80,0,240" Content="-" Click="Minus_OnClick" />
         <Button Name="Multiply" Margin="180,140,60,180" Content="*" Click="Multiply_OnClick" />
         <Button Name="Divide" Margin="240,140,0,180" Content="/" Click="Divide_OnClick" />
+        <Button Name="Pow" Margin="180,200,60,120" Content="^" Click="Pow_OnClick" IsEnabled="False"/>
+        <Button Name="Absolute" Margin="240,200,0,120" Content="|x|" Click="Absolute_OnClick" IsEnabled="False"/>
+        <Button Name="Factorial" Margin="180,260,60,60" Content="n!" Click="Factorial_OnClick" IsEnabled="False"/>
+        <Button Name="OneDiv" Margin="240,260,0,60" Content="1/x" Click="OneDiv_OnClick" IsEnabled="False"/>
+        <Button Name="Ln" Margin="0,320,240,0" Content="ln(x)" Click="Ln_OnClick" IsEnabled="False"/>
+        <Button Name="ToTen" Margin="60,320,180,0" Content="to 10" Click="ToTen_OnClick" IsEnabled="False"/>
+        <Button Name="ToEight" Margin="120,320,120,0" Content="to 8" Click="ToEight_OnClick" IsEnabled="False"/>
+        <Button Name="ToSixteen" Margin="180,320,60,0" Content="to 16" Click="ToSixteen_OnClick" IsEnabled="False"/>
+        <Button Name="ToTwo" Margin="240,320,0,0" Content="to 2" Click="ToTwo_OnClick" IsEnabled="False"/>
     </Grid>
 </Window>

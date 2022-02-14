@@ -26,6 +26,7 @@ namespace Calculator.Calculations.Tokens.subtokens
                 case "cos":
                     result =Math.Cos(d);
                     break;
+                case "mod":
                 case "abs":
                     result =Math.Abs(d);
                     break;
